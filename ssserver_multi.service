@@ -1,0 +1,11 @@
+[Unit]
+Description=ssserver-mutli-user
+After=network.target
+
+[Service]
+User=shadowsocks
+ExecStart=/usr/local/bin/start_ssservers.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Shadowsocks-rust Server 
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssserver --config /etc/shadowsocks-rust/config.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

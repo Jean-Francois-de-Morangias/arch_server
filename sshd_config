@@ -1,0 +1,34 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 53642
+
+# Authentication:
+
+#LoginGraceTime 2m
+PermitRootLogin no
+
+PubkeyAuthentication yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+UsePAM yes
+
+X11Forwarding yes
+
+PrintMotd no
+# Allow Users
+AllowUsers 0xm00nc0d3
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+
